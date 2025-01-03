@@ -1,0 +1,62 @@
+body {
+    background-color: #F6F6F6;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-rows: [item-1-line] 67% [item-2-line] 5% [item-3-line] 10% [last-line];
+    grid-template-columns: 1fr;
+    grid-template-areas: "textarea" "divider" "keyboard";
+    gap: 10px;
+    align-items: top;
+    justify-items: center;
+}
+
+/* section > div:first-of-type {
+    background-color: rgb(122, 122, 193);
+}
+section > div:nth-of-type(2) {
+    background-color: rgb(216, 119, 138);
+}
+section > div:nth-of-type(3) {
+    background-color: rgb(212, 245, 134);
+} */
+
+.item {
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* 
+    Text area
+*/
+
+.item-1 {
+    grid-area: textarea;
+    margin-top: 95px;
+    width: 100%;
+    height: fit-content;
+    grid-row-start: item-1-line;
+}
+
+.item-1 .type-your-keyboard {
+    width: 100%;
+    height: 500px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+/* Divider */
+.item-2 {
+    grid-area: divider;
+    cursor: grab;
+}
+
+/* Keyboard */
+
+.item-3 {
+    grid-area: keyboard;
+}
